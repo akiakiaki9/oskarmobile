@@ -50,11 +50,11 @@ const Footer = () => {
                     <div className="footer-col">
                         <h3 className="footer-title">Информация</h3>
                         <ul className="footer-links">
-                            <li><Link href="/about">О нас</Link></li>
-                            <li><Link href="/delivery">Доставка и оплата</Link></li>
-                            <li><Link href="/warranty">Гарантия</Link></li>
-                            <li><Link href="/returns">Возврат товара</Link></li>
-                            <li><Link href="/blog">Блог</Link></li>
+                            <li><Link href="/info#about">О нас</Link></li>
+                            <li><Link href="/info#delivery">Доставка и оплата</Link></li>
+                            <li><Link href="/info#warranty">Гарантия</Link></li>
+                            <li><Link href="/info#returns">Возврат товара</Link></li>
+                            <li><Link href="/info#blog">Блог</Link></li>
                         </ul>
                     </div>
 
@@ -65,19 +65,19 @@ const Footer = () => {
                             <li>
                                 <span className="contact-icon">📞</span>
                                 <div>
-                                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
-                                    <span className="contact-note">Ежедневно с 10:00 до 21:00</span>
+                                    <a href="tel:+998973000909">+998 (97) 300 09 09</a>
+                                    <span className="contact-note">Ежедневно с 10:00 до 22:00</span>
                                 </div>
                             </li>
                             <li>
                                 <span className="contact-icon">✉️</span>
-                                <a href="mailto:info@oskarmobile.ru">info@oskarmobile.ru</a>
+                                <a href="mailto:info@oskarmobile.ru">info@oskarmobile.uz</a>
                             </li>
                             <li>
                                 <span className="contact-icon">📍</span>
                                 <div>
-                                    <span>г. Москва, ул. Тверская, д. 1</span>
-                                    <span className="contact-note">м. Охотный ряд</span>
+                                    <span>г. Бухара, ул. Мухаммада И., д. 308</span>
+                                    <span className="contact-note">1-й м-н, Бухара</span>
                                 </div>
                             </li>
                         </ul>
@@ -103,7 +103,7 @@ const Footer = () => {
                     <div className="feature-item">
                         <span className="feature-icon">🛡️</span>
                         <div>
-                            <h4>Гарантия 1 год</h4>
+                            <h4>Гарантия 30 дней</h4>
                             <p>Официальная гарантия</p>
                         </div>
                     </div>
@@ -128,10 +128,8 @@ const Footer = () => {
                         </div>
                         <div className="payment-methods">
                             <span>Visa</span>
-                            <span>MasterCard</span>
-                            <span>Мир</span>
-                            <span>SberPay</span>
-                            <span>Yandex Pay</span>
+                            <span>Humo</span>
+                            <span>UzCard</span>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,501 @@
+/* app/brand/brands.css */
+.brands-page {
+    min-height: 100vh;
+    background: var(--white);
+    padding: 1rem 0;
+}
+
+.brands-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Заголовок */
+.brands-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.brands-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+    position: relative;
+    display: inline-block;
+}
+
+.brands-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--orange);
+    border-radius: 3px;
+}
+
+.brands-subtitle {
+    color: #999;
+    font-size: 1rem;
+    margin-top: 1.25rem;
+}
+
+/* Сетка брендов */
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Карточка бренда */
+.brand-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-light);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.brand-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(174, 83, 40, 0.15);
+    border-color: var(--orange);
+}
+
+.brand-card-header {
+    padding: 1.5rem 1rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+/* Иконки брендов */
+.brand-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange) 0%, #ff8a5c 100%);
+    color: white;
+    transition: all 0.3s;
+}
+
+.brand-card:hover .brand-icon {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(174, 83, 40, 0.15);
+}
+
+.brand-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+/* Индивидуальные цвета для брендов */
+.brand-card[data-brand="Apple"] .brand-icon {
+    background: linear-gradient(135deg, #000000, #333333);
+}
+
+.brand-card[data-brand="Samsung"] .brand-icon {
+    background: linear-gradient(135deg, #1428A0, #1E3C8A);
+}
+
+.brand-card[data-brand="Xiaomi"] .brand-icon {
+    background: linear-gradient(135deg, #FF6900, #FF8C42);
+}
+
+.brand-card[data-brand="Google"] .brand-icon {
+    background: linear-gradient(135deg, #4285F4, #34A853);
+}
+
+.brand-card[data-brand="HONOR"] .brand-icon {
+    background: linear-gradient(135deg, #000000, #333333);
+}
+
+.brand-card[data-brand="Spigen"] .brand-icon {
+    background: linear-gradient(135deg, #2C3E50, #3498DB);
+}
+
+.brand-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.35rem;
+}
+
+.brand-count {
+    color: #999;
+    font-size: 0.85rem;
+    background: var(--gray-light);
+    padding: 0.2rem 0.9rem;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+/* Превью товаров */
+.brand-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background: var(--gray-light);
+    flex-wrap: wrap;
+}
+
+.preview-item {
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.brand-card:hover .preview-item {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.preview-more {
+    width: 55px;
+    height: 55px;
+    background: var(--orange);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.brand-card:hover .preview-more {
+    background: #c45f2e;
+}
+
+/* Категории бренда */
+.brand-categories {
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--gray-light);
+    justify-content: center;
+}
+
+.category-tag {
+    font-size: 0.8rem;
+    color: #666;
+    background: var(--gray-light);
+    padding: 0.2rem 0.7rem;
+    border-radius: 100px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.brand-card:hover .category-tag {
+    background: rgba(174, 83, 40, 0.1);
+    color: var(--orange);
+}
+
+/* Футер карточки */
+.brand-card-footer {
+    padding: 1.25rem;
+    margin-top: auto;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--orange);
+    font-weight: 500;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+}
+
+.brand-link-icon {
+    transition: transform 0.2s;
+    font-size: 1.1rem;
+}
+
+.brand-card:hover .brand-link-icon {
+    transform: translateX(5px);
+}
+
+/* SEO текст */
+.brands-seo {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+    background: var(--gray-light);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.brands-seo h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+}
+
+.brands-seo p {
+    color: #666;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .brands-container {
+        padding: 0 1.25rem;
+    }
+    
+    .brands-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .brands-page {
+        padding: 0.5rem 0;
+    }
+    
+    .brands-container {
+        padding: 0 0.75rem;
+    }
+    
+    .brands-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .brands-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .brands-title::after {
+        width: 60px;
+        bottom: -6px;
+    }
+    
+    .brands-subtitle {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+    }
+    
+    .brands-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .brand-card {
+        border-radius: 18px;
+    }
+    
+    .brand-card-header {
+        padding: 1.25rem 0.75rem 0.9rem;
+    }
+    
+    .brand-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.6rem;
+    }
+    
+    .brand-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .brand-name {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .brand-count {
+        font-size: 0.8rem;
+        padding: 0.15rem 0.8rem;
+    }
+    
+    .brand-preview {
+        padding: 1rem;
+        gap: 0.4rem;
+    }
+    
+    .preview-item,
+    .preview-more {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    
+    .preview-more {
+        font-size: 0.9rem;
+    }
+    
+    .brand-categories {
+        padding: 0.75rem;
+        gap: 0.35rem;
+    }
+    
+    .category-tag {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.6rem;
+    }
+    
+    .brand-card-footer {
+        padding: 1rem;
+    }
+    
+    .brand-link {
+        font-size: 0.9rem;
+        gap: 0.4rem;
+    }
+    
+    .brands-seo {
+        margin-top: 2rem;
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+    }
+    
+    .brands-seo h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .brands-seo p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* Адаптивность для маленьких телефонов */
+@media (max-width: 480px) {
+    .brands-container {
+        padding: 0 0.5rem;
+    }
+    
+    .brands-title {
+        font-size: 1.75rem;
+    }
+    
+    .brands-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .brand-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .brand-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .brand-name {
+        font-size: 1.15rem;
+    }
+    
+    .preview-item,
+    .preview-more {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .brand-preview {
+        gap: 0.3rem;
+    }
+    
+    .brand-categories {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    
+    .category-tag {
+        width: fit-content;
+    }
+    
+    .brands-seo {
+        padding: 1.25rem 0.75rem;
+    }
+    
+    .brands-seo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .brands-seo p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 360px) {
+    .brand-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .brand-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .preview-item,
+    .preview-more {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .brand-name {
+        font-size: 1rem;
+    }
+    
+    .brand-count {
+        font-size: 0.7rem;
+    }
+}

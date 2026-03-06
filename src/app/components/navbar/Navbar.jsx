@@ -171,9 +171,9 @@ const Navbar = () => {
 
                     {/* Правая часть - иконки и телефон */}
                     <div className="navbar-right">
-                        <a href="tel:+79991234567" className="phone-link desktop-only">
+                        <a href="tel:+998973000909" className="phone-link desktop-only">
                             <FiPhone size={20} />
-                            <span>+7 (999) 123-45-67</span>
+                            <span>+998 (97) 300 09 09</span>
                         </a>
 
                         <button
@@ -184,9 +184,9 @@ const Navbar = () => {
                             <FiSearch size={26} />
                         </button>
 
-                        <button className="icon-button" aria-label="Войти">
+                        {/* <button className="icon-button" aria-label="Войти">
                             <FiUser size={26} />
-                        </button>
+                        </button> */}
 
                         <Link href='/favorites' className="icon-button" aria-label="Избранное">
                             <FiHeart size={26} />
